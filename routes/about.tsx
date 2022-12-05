@@ -3,13 +3,16 @@ import Header from "../components/Header.tsx";
 import Hyperlink from "../components/Hyperlink.tsx";
 
 export default function Home() {
+  const heading2 = "mb-2 text-2xl font-bold tracking-tight text-gray-900";
+  const para = "mb-3 font-normal text-gray-700";
+
   return (
     <>
       <Header active="/about" />
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+      <h2 class={heading2}>
         Isn't there a previous version of Ocean Facts?
       </h2>
-      <p class="mb-3 font-normal text-gray-700">
+      <p class={para}>
         Yes you're right! This version is <Fresh /> while the
         <Hyperlink
           text="previous version"
@@ -17,10 +20,10 @@ export default function Home() {
         />
         is made with Next.js.
       </p>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+      <h2 class={heading2}>
         How did you do this?
       </h2>
-      <p class="mb-3 font-normal text-gray-700">
+      <p class={para}>
         The chat messages from Atricord were extracted using
         <Hyperlink
           text="Discord Chat Exporter"
@@ -29,19 +32,19 @@ export default function Home() {
         and the chat messages were filtered using a custom Python script I
         wrote.
       </p>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+      <h2 class={heading2}>
         Credits
       </h2>
-      <p class="mb-3 font-normal text-gray-700">
+      <p class={para}>
         Disco Fever (Disco Fever#3558) for all the facts.
         <br />
         Please do not distribute any of the facts without Disco Fever's
         permission.
       </p>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+      <h2 class={heading2}>
         Feedback
       </h2>
-      <p class="mb-3 font-normal text-gray-700">
+      <p class={para}>
         Please send your feedback
         <Hyperlink
           text="here"
