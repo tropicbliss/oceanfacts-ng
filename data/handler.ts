@@ -52,7 +52,7 @@ export function searchFacts(query: string, limit = 10): Factoid[] {
     if (result.length === limit) {
       break;
     }
-    if (fact.fact.includes(query)) {
+    if (fact.fact.toLowerCase().includes(query)) {
       result.push({ fact, id });
     }
   }
