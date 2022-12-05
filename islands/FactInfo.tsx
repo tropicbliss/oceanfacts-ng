@@ -40,7 +40,7 @@ export default function FactInfo(props: { data: Fact }) {
                         <span
                           class={tw`${
                             image === currPic
-                              ? "ring-cyber_purple"
+                              ? "ring-purpur"
                               : "ring-transparent"
                           } pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2`}
                           aria-hidden="true"
