@@ -66,13 +66,11 @@ export default function Home({ data }: PageProps<Factoid[]>) {
               class="flex items-center justify-between border-gray-200 bg-white py-6"
               aria-label="Pagination"
             >
-              <div class="hidden sm:block">
-                <p class="text-sm text-gray-700">
-                  Showing&nbsp;
-                  <span class="font-medium">{data.length}</span>
-                  &nbsp;results&nbsp;
-                </p>
-              </div>
+              <p class="text-sm text-gray-700">
+                Showing&nbsp;
+                <span class="font-medium">{data.length}</span>
+                &nbsp;results&nbsp;
+              </p>
             </nav>
           </>
         )}
