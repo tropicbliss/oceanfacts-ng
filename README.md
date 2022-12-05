@@ -1,4 +1,6 @@
-# fresh project
+# oceanfacts-ng
+
+[Link to old project](https://github.com/tropicbliss/oceanfacts).
 
 ### Usage
 
