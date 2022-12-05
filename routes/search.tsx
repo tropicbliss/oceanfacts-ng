@@ -69,7 +69,7 @@ export default function Home({ data }: PageProps<Factoid[]>) {
               <p class="text-sm text-gray-700">
                 Showing&nbsp;
                 <span class="font-medium">{data.length}</span>
-                &nbsp;results&nbsp;
+                &nbsp;{data.length === 1 ? "result" : "results"}&nbsp;
               </p>
             </nav>
           </>
