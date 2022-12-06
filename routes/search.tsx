@@ -1,6 +1,6 @@
 import Header from "../components/Header.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { Factoid, searchFacts } from "../data/handler.ts";
+import { Factoid, getAllFacts, searchFacts } from "../data/handler.ts";
 import IconFileSearch from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/file-search.tsx";
 
 export const handler: Handlers<Factoid[]> = {
@@ -13,6 +13,8 @@ export const handler: Handlers<Factoid[]> = {
 };
 
 export default function Home({ data }: PageProps<Factoid[]>) {
+  const totalLength = getAllFacts().length;
+
   return (
     <>
       <Header />
@@ -69,7 +71,9 @@ export default function Home({ data }: PageProps<Factoid[]>) {
               <p class="text-sm text-gray-700">
                 Showing&nbsp;
                 <span class="font-medium">{data.length}</span>
-                &nbsp;{data.length === 1 ? "result" : "results"}&nbsp;
+                &nbsp;of&nbsp;
+                <span class="font-medium">{totalLength}</span>
+                &nbsp;results
               </p>
             </nav>
           </>

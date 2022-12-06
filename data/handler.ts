@@ -45,16 +45,9 @@ export function isLastPage(page: number, factsPerPage = 10): boolean {
   return page === Math.ceil(facts.length / factsPerPage);
 }
 
-export function searchFacts(query: string, limit = 10): Factoid[] {
+export function searchFacts(query: string): Factoid[] {
   const facts = getAllFacts();
-  const result = [];
-  for (const [id, fact] of facts.entries()) {
-    if (result.length === limit) {
-      break;
-    }
-    if (fact.fact.toLowerCase().includes(query)) {
-      result.push({ fact, id });
-    }
-  }
-  return result;
+  return facts.map((fact, id) => {
+    return { fact, id };
+  }).filter((factoid) => factoid.fact.fact.toLowerCase().includes(query));
 }
