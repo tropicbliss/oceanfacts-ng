@@ -17,6 +17,7 @@ export default function App({ Component }: AppProps) {
       <div class="px-8">
         <Component />
         <Footer />
+        <div class="py-3"></div>
       </div>
     </>
   );

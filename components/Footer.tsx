@@ -2,23 +2,18 @@ import BrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-gi
 
 export default function Footer() {
   return (
-    <footer class="bg-white">
-      <div class="py-12 md:flex md:items-center md:justify-between">
-        <div class="flex justify-center space-x-6 md:order-2">
+    <footer className="bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center sm:justify-end">
           <a
             href="https://github.com/tropicbliss/oceanfacts-ng"
-            class="text-gray-400 hover:text-gray-500"
+            className="text-gray-400 hover:text-gray-500"
             target="_blank"
             rel="noreferrer"
           >
-            <span class="sr-only">GitHub</span>
+            <span className="sr-only">GitHub</span>
             <BrandGithub />
           </a>
-        </div>
-        <div class="mt-8 md:order-1 md:mt-0">
-          <p class="text-center text-base text-gray-400">
-            &copy; 2022 tropicbliss. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
