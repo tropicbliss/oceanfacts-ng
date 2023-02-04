@@ -18,7 +18,7 @@ export default function Header({ active }: Props) {
     <div class="bg-white w-full py-6 flex flex-col md:flex-row gap-4 justify-between">
       <div class="flex items-center">
         <IconBeach />
-        <div class="text-2xl  ml-1 font-bold">
+        <div class="text-2xl  ml-1 font-bold select-none">
           Ocean Facts
         </div>
       </div>
