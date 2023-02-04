@@ -10,8 +10,8 @@ export interface Factoid {
   id: number;
 }
 
-export function getFactFromId(id: number): Fact | null {
-  return facts.at(id) ?? null;
+export function getFactFromId(id: number): Fact | undefined {
+  return facts.at(id);
 }
 
 export function getAllFacts(): Fact[] {
@@ -38,9 +38,12 @@ export function getFactsFromPageNum(
   return facts.slice(start, end);
 }
 
-export function getStartIdx(page: number, factsPerPage = 10): number | null {
+export function getStartIdx(
+  page: number,
+  factsPerPage = 10,
+): number | undefined {
   if (page < 1 || factsPerPage < 1) {
-    return null;
+    return undefined;
   }
   return (page - 1) * factsPerPage;
 }
