@@ -1,14 +1,17 @@
 import IconBeach from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/beach.tsx";
+import { getRandomFactId } from "../data/handler.ts";
 
 type Props = {
   active?: string;
 };
 
 export default function Header({ active }: Props) {
+  const randomFactId = getRandomFactId();
   const menus = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "API", href: "/apidocs" },
+    { name: "I'm Feeling Lucky", href: `/fact/${randomFactId}` },
   ];
 
   return (

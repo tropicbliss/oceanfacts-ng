@@ -19,7 +19,11 @@ export function getAllFacts(): Fact[] {
 }
 
 export function getRandomFact(): Fact {
-  return facts[Math.floor(Math.random() * facts.length)];
+  return facts[getRandomFactId()];
+}
+
+export function getRandomFactId(): number {
+  return Math.floor(Math.random() * facts.length);
 }
 
 export function getFactsFromPageNum(

@@ -1,7 +1,7 @@
 import Header from "../components/Header.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Factoid, getAllFacts, searchFacts } from "../data/handler.ts";
-import IconFileSearch from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/file-search.tsx";
+import IconFileSearch from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/file-search.tsx";
 
 export const handler: Handlers<Factoid[]> = {
   GET(req, ctx) {
