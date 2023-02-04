@@ -8,10 +8,10 @@ type Props = {
 export default function Header({ active }: Props) {
   const randomFactId = getRandomFactId();
   const menus = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "API", href: "/apidocs" },
-    { name: "I'm Feeling Lucky", href: `/fact/${randomFactId}` },
+    { name: "Home", href: "/", hidden: false },
+    { name: "About", href: "/about", hidden: false },
+    { name: "API", href: "/apidocs", hidden: false },
+    { name: "I'm Feeling Lucky", href: `/fact/${randomFactId}`, hidden: true },
   ];
 
   return (
@@ -28,7 +28,8 @@ export default function Header({ active }: Props) {
             <a
               href={menu.href}
               class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500" +
-                (menu.href === active ? " font-bold border-b-2" : "")}
+                (menu.href === active ? " font-bold border-b-2" : "") +
+                (menu.hidden ? " hidden sm:inline" : "")}
             >
               {menu.name}
             </a>
